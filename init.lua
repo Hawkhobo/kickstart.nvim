@@ -100,9 +100,8 @@ vim.g.have_nerd_font = false
 
 -- Make line numbers default
 vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+-- enable relative line numbers
+vim.wo.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -160,6 +159,14 @@ vim.opt.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.opt.confirm = true
+
+-- general indentation settings
+vim.opt.tabstop = 8 -- how many spaces a tab character represents individually
+vim.opt.shiftwidth = 4 -- default indent for auto-indent, >>, <<
+vim.opt.expandtab = true -- Convert tabs to space by default (especially useful for Python!)
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.softtabstop = 4 -- How many spaces are inserted/deleted by <Tab>/<BS> in insert mode
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
