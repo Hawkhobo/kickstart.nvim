@@ -909,8 +909,15 @@ require('lazy').setup({
         styles = {
           comments = { italic = false }, -- Disable italics in comments
         },
+        -- target overrides of characters
+        on_highlights = function(hl, c)
+          -- white space symbols are brighter
+          -- c.fg is foreground color
+          hl.Whitespace = { fg = '#F12F2F' }
+          -- make relative line numbers brighter
+          hl.LineNr = { fg = '#BA5A3F' }
+        end,
       }
-
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
